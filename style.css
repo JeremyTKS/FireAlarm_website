@@ -112,6 +112,10 @@ body {
     .dashboard-section {
         margin-bottom: 15px;
     }
+    #emergencyIcon {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -133,8 +137,8 @@ body {
         margin-bottom: 10px;
     }
     #emergencyIcon {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -157,7 +161,7 @@ body {
         margin-bottom: 5px;
     }
     #emergencyIcon {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 }

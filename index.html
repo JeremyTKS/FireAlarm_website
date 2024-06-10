@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alarm Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Fire Alarm System</h1>
+        <img id="statusIcon" class="status-icon" src="icon.png" alt="Status Icon">
+    </header>
+    <div class="dashboard-container">
+        <div class="left-panel">
+            <section id="sensorCondition" class="dashboard-section">
+                <h2>Sensor Condition</h2>
+                <div class="sensor-container">
+                    <canvas id="sensorCanvas"></canvas>
+                </div>
+            </section>
+        </div>
+        <div class="right-panel">
+            <section id="fireCondition" class="dashboard-section">
+                <h2>Fire Alarm Condition
+                    <img id="emergencyIcon" alt="Emergency Icon">
+                </h2>
+                <div class="firealarm-container">
+                    <canvas id="firealarmCanvas"></canvas>
+                    <div id="emergencyCondition">
+                        <!-- Your emergency condition content goes here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="fireCondition.js"></script>
+    <script type="module" src="sensorCondition.js"></script>
+</body>
+</html>

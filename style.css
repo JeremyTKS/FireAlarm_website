@@ -1,0 +1,163 @@
+/* Reset CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.status-icon {
+    width: 70px;
+    height: 70px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    height: auto; /* Adjust height minus header height */
+    overflow: auto;
+}
+
+/* Left Panel */
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-panel {
+    background-color: #f0f8ff;
+}
+
+.right-panel {
+    background-color: rgba(173, 216, 230, 0.3);
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 700px; /* Adjust the minimum height as needed */
+}
+
+
+/* Fire Alarm Section */
+#fireCondition {
+    position: relative;
+}
+
+.dashboard-section h2 {
+    position: relative;
+}
+
+#emergencyIcon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Canvas Styling */
+.sensor-container, .firealarm-container {
+    position: relative;
+}
+
+#sensorCanvas, #firealarmCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+    .status-icon {
+        width: 45px;
+        height: 45px;
+    }
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        flex: 1;
+        padding: 15px;
+    }
+    .dashboard-section {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+    .status-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        flex: 1;
+        padding: 10px;
+    }
+    .dashboard-section {
+        margin-bottom: 10px;
+    }
+    #emergencyIcon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header h1 {
+        font-size: 18px;
+    }
+    .status-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        flex: 1;
+        padding: 5px;
+    }
+    .dashboard-section {
+        margin-bottom: 5px;
+    }
+    #emergencyIcon {
+        width: 80px;
+        height: 80px;
+    }
+}
